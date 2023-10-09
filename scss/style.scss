@@ -191,10 +191,27 @@ html {
                         font-weight: bold;
                         padding-left: 15px;
                     }
+
+                    &.btnBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+
+                        button {
+                            width: 45%;
+                            height: 10vw;
+
+                            &.active {
+                                background: #000000;
+                                color: #ffffff;
+                            }
+                        }
+                    }
                 }
             }
 
-            button {
+            #sendRecord {
                 display: block;
                 width: 240px;
                 height: 50px;

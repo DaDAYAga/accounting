@@ -69,13 +69,17 @@ function send(data, currentdate){
             if(response) {
                 alert('紀錄成功！！');
 
-                $("form input, .subText").val("");
+                $("form label:not(.name) input").val("");
 
                 $("form select").val("0");
                 
                 $(".price .nagative")
                 .addClass("display")
                 .siblings().removeClass("display");
+
+                $(".btnBox .nagative")
+                .addClass("active")
+                .siblings().removeClass("active");
             }
             else {
                 alert('紀錄失敗！！');
@@ -117,5 +121,25 @@ $(function(){
     $(".price i").click(function(){
         $(".price i")
         .toggleClass("display");
+
+        $(".btnBox button")
+        .toggleClass("active");
+    })
+
+    $(".btnBox button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+
+        if($(this).hasClass("nagative")) {
+            $(".price i.nagative")
+            .addClass("display")
+            .siblings().removeClass("display");
+        }
+        else if($(this).hasClass("positive")) {
+            $(".price i.positive")
+            .addClass("display")
+            .siblings().removeClass("display");
+        }
     })
 })

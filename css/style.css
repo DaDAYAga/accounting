@@ -177,7 +177,25 @@ html body .container form label select {
   font-weight: bold;
   padding-left: 15px;
 }
-html body .container button {
+html body .container form label.btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .container form label.btnBox button {
+  width: 45%;
+  height: 10vw;
+}
+html body .container form label.btnBox button.active {
+  background: #000000;
+  color: #ffffff;
+}
+html body .container #sendRecord {
   display: block;
   width: 240px;
   height: 50px;
