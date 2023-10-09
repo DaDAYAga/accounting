@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>測試回傳資料_鹽酥雞</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="./js/javascript.js"></script>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li>
+				<h1>記帳小亦亦</h1>
+			</li>
+			<li>
+				<input id="userName" type="text" placeholder="您的大名">
+			</li>
+			<li>
+				<h2>種類</h2>
+				<select id="kind" name="kind">
+					<option style="display:none" value="">請選擇種類</option>
+					<option value="食物">食物</option>
+					<option value="運動">運動</option>
+					<option value="交通">交通</option>
+					<option value="金融">金融</option>
+				</select>
+			</li>
+			<li>
+				<h2>細項分類</h2>
+				<select class="typeSelect food" name="type">
+					<option style="display:none" value="">請選擇細項</option>
+					<option value="早餐_">早餐_</option>
+					<option value="午餐_">午餐_</option>
+					<option value="晚餐_">晚餐_</option>
+					<option value="零食_">零食_</option>
+					<option value="點心_">點心_</option>
+					<option value="飲料_">飲料_</option>
+					<option value="其他_">其他_</option>
+				</select>
+				<select class="typeSelect sport" name="type">
+					<option style="display:none" value="">請選擇細項</option>
+					<option value="羽球場_">羽球場_</option>
+					<option value="羽球拍_">羽球拍_</option>
+					<option value="羽球_">羽球_</option>
+					<option value="健身房_">健身房_</option>
+					<option value="其他_">其他_</option>
+				</select>
+				<select class="typeSelect transport" name="type">
+					<option style="display:none" value="">請選擇細項</option>
+					<option value="油錢_">油錢_</option>
+					<option value="黑油_">黑油_</option>
+					<option value="輪胎_">輪胎_</option>
+					<option value="小保養_">小保養_</option>
+					<option value="大保養_">大保養_</option>
+					<option value="其他_">其他_</option>
+				</select>
+				<select class="typeSelect money" name="type">
+					<option style="display:none" value="">請選擇細項</option>
+					<option value="薪資入賬_">薪資入賬_</option>
+					<option value="轉帳_">轉帳_</option>
+					<option value="投資_">投資_</option>
+					<option value="借金__">借金_</option>
+					<option value="還金_">還金_</option>
+					<option value="其他_">其他_</option>
+				</select>
+			</li>
+		</ul>
+		<form action="">
+			<label>
+				<p>名稱:</p>
+				<input type="text" id="name">
+			</label>
+			<label class="price">
+				<p>價格:</p>
+				<input type="number" id="price">
+				<i class="nagative display"></i>
+				<i class="positive"></i>
+			</label>
+			<label>
+				<p>奢侈度:</p>
+				<select id="luxury" name="luxury">
+					<option style="display:none" value="">這次花費有多奢侈</option>
+					<option value="0" selected>0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</label>
+		</form>
+		<button type="button" id="sendRecord">記帳</button>
+	</div>
+</body>
+</html>
